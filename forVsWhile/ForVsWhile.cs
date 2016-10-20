@@ -6,12 +6,21 @@ namespace Vsite.CSharp
     {
         public static void PetljaFor(int n)
         {
-            // TODO: Napisati petlju for koja će ispisati brojeve od 0 do (uključivo) n
+            //  Napisati petlju for koja će ispisati brojeve od 0 do (uključivo) n
+            for (int i=0; i <= n; i++){
+                Console.WriteLine(i);
+            }
         }
 
         public static void PetljaWhile(int n)
         {
-            // TODO: Napisati petlju while koja će ispisati brojeve od 0 do (uključivo) n
+            // Napisati petlju while koja će ispisati brojeve od 0 do (uključivo) n
+            int i = 0;
+            while (i <= n)
+            {
+                Console.WriteLine(i);
+                i++;
+            };
         }
 
         static void Main(string[] args)
@@ -20,7 +29,8 @@ namespace Vsite.CSharp
 
             PetljaWhile(10);
 
-            // TODO: Prevesti program te programom ILDasm usporediti međukod gornjih metoda.
+            // Prevesti program te programom ILDasm usporediti međukod gornjih metoda.
+            // Kodovi koji se generiraju isto... efikasnost ostaje ista
 
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey();

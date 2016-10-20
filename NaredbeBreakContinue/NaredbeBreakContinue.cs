@@ -9,8 +9,11 @@ namespace Vsite.CSharp
             int zbroj = 0;
             for (int i = 1; i <= n; ++i)
             {
-                // TODO: Ako i nije djeljiv s d, ne dodaje se (tj. treba se vratiti na početak petlje naredbom continue)
-
+                // Ako i nije djeljiv s d, ne dodaje se (tj. treba se vratiti na početak petlje naredbom continue)
+                //if (i % d != 0)
+                //{
+                //    continue;
+                //}
                 zbroj += i;
             }
             return zbroj;
