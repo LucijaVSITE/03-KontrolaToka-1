@@ -8,7 +8,7 @@ namespace Vsite.CSharp
         {
             double tri = 3.0;
 
-            // TODO: provjeriti što će ispisati donje dvije usporedbe te promijeniti metodu JednakiSu tako da se dobije očekivani rezultat
+            // provjeriti što će ispisati donje dvije usporedbe te promijeniti metodu JednakiSu tako da se dobije očekivani rezultat
             if (JednakiSu((1.0 - 1.0 / tri), (2.0 / tri)))
                 Console.WriteLine("1 - 1/3 jednako je 2/3");
             else
@@ -25,7 +25,19 @@ namespace Vsite.CSharp
 
         public static bool JednakiSu(double broj1, double broj2)
         {
-            return broj1 == broj2;
+            //if(broj1 ==broj2)
+            //return true;
+            //double razlika = Math.Abs(broj1 - broj2);
+            //double delta=Math.Max(Math.Abs(broj1),Math.Abs(broj2))*0.0000001;
+            //return (razlika < delta) ;
+
+            long l1 = BitConverter.DoubleToInt64Bits(broj1);
+            long l2 = BitConverter.DoubleToInt64Bits(broj2);
+            if (Math.Abs(l1 - l2) < 4)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
